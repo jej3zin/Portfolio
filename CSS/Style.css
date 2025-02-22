@@ -87,7 +87,7 @@ body {
   left: -0.7rem;
   top: 1.4rem;
   position: absolute;
-  -webkit-transition: 0.5s ease;
+  transition: var(--Transi);
 }
 .list-aba {
   width: auto;
