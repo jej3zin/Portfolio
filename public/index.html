@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://github.com/jej3zin.png" />
 
     <!-- Import CSS -->
     <link rel="stylesheet" href="/styles/index.css" />
 
+    <!-- Import Ion-icons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -24,14 +25,61 @@
     </div>
 
     <div id="content">
-      <header class="head">
-        <nav class="headNav-menu">
-          <a href="/" class="headNav-a active">Home</a>
-          <a href="/" class="headNav-a">Dev</a>
-          <a href="/" class="headNav-a">Design</a>
-          <a href="/" class="headNav-a">Vídeos</a>
-        </nav>
+      <header class="head-sect">
+        <div class="box-center">
+          <div class="box-img">
+            <img id="avatar" alt="Avatar" />
+          </div>
 
+          <div class="texts">
+            <h1>Jean Oliveira</h1>
+            <p>Uma pessoa cheia de ideias...</p>
+          </div>
+
+          <div class="social-box">
+            <a
+              href="https://www.youtube.com/@Jej3zin"
+              target="_blank"
+              class="social-link"
+              ><ion-icon name="logo-youtube"></ion-icon
+            ></a>
+            <a
+              href="https://www.instagram.com/jej3zin/"
+              target="_blank"
+              class="social-link"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+            <a
+              href="https://github.com/jej3zin"
+              target="_blank"
+              class="social-link"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="nav-memu">
+        <a href="" class="menu-link menuActive">Programador</a>
+        <a href="" class="menu-link">Designer</a>
+        <a href="" class="menu-link">Editor</a>
+      </nav>
+
+      <section class="nav-content">
+        <article class="art-content contActive">
+          <h2>Programador</h2>
+        </article>
+
+        <article class="art-content">
+          <h2>Designer</h2>
+        </article>
+
+        <article class="art-content">
+          <h2>Editor</h2>
+        </article>
+      </section>
+
+      <header class="head">
         <nav class="head-menu">
           <ul class="head-ul">
             <li class="head-list">
@@ -130,5 +178,7 @@
         <div class="square">textos</div>
       </main>
     </div>
+
+    <script type="module" src="/js/index.js"></script>
   </body>
 </html>
