@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -67,15 +67,130 @@
 
       <section class="nav-content">
         <article class="art-content contActive">
-          <h2>Programador</h2>
+          <header class="headNav">
+            <nav class="menuSlide">
+              <button data-slide="0" class="mS-menu active">MWL</button>
+              <button data-slide="1" class="mS-menu">Máfia do Pix</button>
+              <button data-slide="2" class="mS-menu">OtakuHub</button>
+              <button data-slide="3" class="mS-menu">SpawnVerse</button>
+              <button data-slide="4" class="mS-menu">LumiNew</button>
+            </nav>
+          </header>
+
+          <fieldset class="slideshow">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <img src="/asset/project/mwl.png" class="slide-bg" />
+              <div class="slide__content">
+                <h2>My Work Lab.</h2>
+                <p class="subtitle">A pure CSS and HTML slideshow concept.</p>
+                <p>To add or remove slides:</p>
+                <ul>
+                  <li>Add a new slide template in the HTML</li>
+                  <li>Update the <code>$slide-count</code> SCSS variable</li>
+                  <li>
+                    Tab colours: Update the <code>$c-slides</code> SCSS variable
+                  </li>
+                  <li>
+                    Slide popout images: Update the <code>$b-slides</code> SCSS
+                    variable
+                  </li>
+                </ul>
+                <p>Use the tabs below to change slide.</p>
+                <p>Et voila.</p>
+                <a
+                  href="https://myworklab.netlify.app/"
+                  target="_blank"
+                  class="repo"
+                  ><ion-icon name="logo-github"></ion-icon>Repositório</a
+                >
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="/asset/project/mafiadopix.png" class="slide-bg" />
+              <div class="slide__content">
+                <h2>Máfia do Pix</h2>
+                <p class="subtitle">
+                  O Terror para os Streamers, mas
+                  <strong>Ouro para quem envia donates.</strong>
+                </p>
+                <p>
+                  Desenvolvido com intuito de gerar entreterimento e muita
+                  diversão ao chat, já o streamer, nem tanto.
+                </p>
+                <a
+                  href="https://mafiadopix.netlify.app/"
+                  target="_blank"
+                  class="repo"
+                  ><ion-icon name="logo-github"></ion-icon>Repositório</a
+                >
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="/asset/project/otakuhub.png" class="slide-bg" />
+              <div class="slide__content">
+                <h2>OtakuHub</h2>
+                <p class="subtitle">Yet more here</p>
+                <p></p>
+                <a
+                  href="https://pjt-otakuhub.netlify.app/"
+                  target="_blank"
+                  class="repo"
+                  ><ion-icon name="logo-github"></ion-icon>Repositório</a
+                >
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img src="/asset/project/spawnverse.png" class="slide-bg" />
+              <div class="slide__content">
+                <h2>SpawnVerse</h2>
+                <p class="subtitle">Yada yada</p>
+                <p></p>
+                <a
+                  href="https://pjt-otakuhub.netlify.app/"
+                  target="_blank"
+                  class="repo"
+                  ><ion-icon name="logo-github"></ion-icon>Repositório</a
+                >
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+              <img src="/asset/project/luminwe.png" class="slide-bg" />
+              <div class="slide__content">
+                <h2>LumiNew</h2>
+                <p class="subtitle">It's over</p>
+                <p></p>
+                <a
+                  href="https://luminew.netlify.app/"
+                  target="_blank"
+                  class="repo"
+                  ><ion-icon name="logo-github"></ion-icon>Repositório</a
+                >
+              </div>
+            </div>
+
+            <!-- Add more slides here! -->
+          </fieldset>
         </article>
 
         <article class="art-content">
-          <h2>Designer</h2>
+          <header class="headNav">
+            <h2>Designer</h2>
+          </header>
         </article>
 
         <article class="art-content">
-          <h2>Editor</h2>
+          <header class="headNav">
+            <h2>Editor</h2>
+          </header>
         </article>
       </section>
 
