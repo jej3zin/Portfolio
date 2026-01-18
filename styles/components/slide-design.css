@@ -1,0 +1,112 @@
+/* =========== Slide Designer =========== */
+.designer-slider {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.designer-slide {
+  padding: 7rem 3rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.designer-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+} /* CONTAINER IMAGENS */
+.designer-img {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-04);
+}
+
+/* AVATAR + BANNER */
+.designer-img .visual {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-04);
+}
+
+.designer-img .icone {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.designer-img .banner {
+  flex: 1;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: var(--radius-04);
+}
+
+/* THUMBS */
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-03);
+}
+.designer-img .thumb {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-03);
+  transition: var(--anima-01);
+  transform: scale(1) perspective(1000px) rotateY(0deg);
+}
+.designer-img .thumb:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: var(--shadow-brand-02);
+  transform: scale(1.05) perspective(1500px) rotateY(20deg);
+}
+
+/* TEXTO */
+.designer-text {
+  width: 35%;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-03);
+}
+.designer-text h2 {
+  color: var(--brand-01);
+}
+.designer-subtitle {
+  margin-top: -1rem;
+}
+
+.designer-nav {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.designer-btn {
+  padding: 8px 14px;
+  font-weight: 500;
+  color: var(--text-02);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-04);
+  background: var(--bg-02);
+  transition: var(--anima-01);
+}
+.designer-btn:hover,
+.designer-btn.active {
+  background: var(--brand-01);
+  color: var(--bg-02);
+}

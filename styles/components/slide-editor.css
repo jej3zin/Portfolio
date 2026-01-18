@@ -1,0 +1,197 @@
+/* ===== EDITOR / TIMELINE ===== */
+.editor {
+  font-family: var(--font-sans);
+}
+
+.editor-timeline {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--gap-06);
+  padding: var(--space-9);
+  background: linear-gradient(160deg, var(--bg-01), var(--bg-02));
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== LINHA DO TEMPO ===== */
+.timeline-track {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  bottom: 10%;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--brand-01),
+    transparent
+  );
+  box-shadow: var(--shadow-brand-03);
+}
+
+/* ===== CLIPS ===== */
+.editor-clips {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-05);
+  justify-content: center;
+}
+
+.clip-card {
+  position: relative;
+  background: var(--bg-05);
+  border-left: 4px solid var(--brand-01);
+  padding: var(--space-5);
+  border-radius: var(--radius-03);
+  overflow: hidden;
+  box-shadow: var(--shadow-02);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: clip-in 0.8s ease forwards;
+  transition: var(--anima-01);
+}
+
+.clip-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.clip-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.clip-card:hover {
+  background: var(--bg-06);
+  box-shadow: var(--shadow-brand-04);
+  transform: translateX(0) scale(1.03);
+}
+
+/* ===== VÍDEO BACKGROUND ===== */
+.clip-card video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  filter: blur(6px) brightness(0.6);
+  transition: var(--anima-01);
+}
+
+.clip-card:hover video {
+  opacity: 0.35;
+  filter: blur(0) brightness(1);
+}
+
+/* Overlay */
+.clip-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25));
+  opacity: 0;
+  transition: var(--anima-01);
+}
+
+.clip-card:hover::after {
+  opacity: 1;
+}
+
+.clip-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== PLAYER (YT STYLE) ===== */
+.yt-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 36px;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-02);
+  padding: 0 var(--space-4);
+  opacity: 0;
+  transition: var(--anima-01);
+}
+
+.clip-card:hover .yt-controls {
+  opacity: 1;
+}
+
+.btn {
+  background: var(--bg-02);
+  border: none;
+  color: var(--text-01);
+  padding: 6px 8px;
+  border-radius: var(--radius-01);
+  cursor: pointer;
+  transition: var(--anima-01);
+}
+
+.btn:hover {
+  background: var(--brand-03);
+  box-shadow: var(--shadow-btns);
+}
+
+.yt-controls .right {
+  margin-left: auto;
+  display: flex;
+  gap: var(--gap-02);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  height: 4px;
+  background: var(--bg-03);
+}
+
+.progress .bar {
+  height: 100%;
+  width: 0%;
+  background: var(--brand-01);
+  transition: width 0.15s linear;
+}
+
+/* ===== INFO LATERAL ===== */
+.editor-info {
+  background: var(--bg-05);
+  border: var(--card-border);
+  border-radius: var(--radius-04);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-03);
+  animation: fade-side 0.8s ease forwards;
+}
+
+.editor-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-03);
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes clip-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-side {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

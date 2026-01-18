@@ -1,0 +1,166 @@
+.head-sect {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, var(--brand-06), transparent 70%),
+    var(--bg-01);
+}
+.box-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--gap-03);
+}
+/* Avatar */
+.box-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#avatar {
+  height: 13rem;
+  width: 13rem;
+  display: flex;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--brand-01);
+  box-shadow: var(--shadow-brand-01);
+  transition: var(--anima-01);
+  &:hover {
+    box-shadow: var(--shadow-brand-04);
+  }
+}
+/* Texts */
+.box-center .texts {
+  text-align: center;
+  & p {
+    margin-top: -0.25rem;
+    color: var(--text-02);
+  }
+}
+
+/* Social */
+.social-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-03);
+}
+.social-link {
+  padding: 0.25rem;
+  display: flex;
+  color: var(--text-02);
+  border: 2px var(--border-03);
+  border-radius: var(--radius-01);
+  transition: var(--anima-01);
+  &:hover {
+    border: 2px solid var(--brand-01);
+    box-shadow: var(--shadow-block);
+    transform: translateY(-4px);
+  }
+}
+.social-link ion-icon {
+  font-size: 1.5rem;
+}
+
+/* NAV */
+.head-ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.head-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+.list-link {
+  padding: 0.3rem;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-01);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid var(--text-01);
+  }
+}
+/* DROPDOWN */
+.drop-icons {
+  margin-right: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.dropbtn {
+  cursor: pointer;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  min-width: 13rem;
+  position: absolute;
+  top: 1.8rem;
+  right: -3rem;
+  z-index: 1;
+  background: var(--bg-01);
+  display: none;
+}
+.list-drop {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-01);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.list-drop:hover {
+  color: var(--brand-01);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.list-drop:before {
+  content: '';
+  position: absolute;
+  inset: calc(100% - 1.5px) 0 0 0; /* 3px = the thickness */
+  background: var(--brand-01); /* the color */
+  scale: 0 1;
+  transition:
+    0.3s,
+    translate 0s 0.3s;
+}
+.dropdown-content:hover .list-drop:before {
+  scale: 1;
+}
+.list-drop:hover::before {
+  translate: 0;
+  transition: 0.3s;
+}
+.dropdown-content:hover .list-drop:has(~ .list-drop:hover)::before {
+  translate: 100% 0;
+  transition:
+    0.2s 0.2s,
+    scale 0s 0.4s;
+}
+.dropdown-content:hover .list-drop:hover ~ .list-drop::before {
+  translate: -100% 0;
+  transition:
+    0.2s 0.2s,
+    scale 0s 0.4s;
+}
