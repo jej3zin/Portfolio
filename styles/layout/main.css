@@ -54,3 +54,33 @@
 .art-content.contActive {
   display: flex;
 }
+
+/* Section About me */
+.sect-aboutme {
+  height: 100vh;
+  padding: 0 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box-imageme {
+  height: max-content;
+  width: 22rem;
+  object-fit: cover;
+  border-radius: var(--radius-03);
+  border: 2px solid var(--brand-01);
+}
+.box-imageme img {
+  border-radius: var(--radius-03);
+}
+
+.bpx-textme {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.bpx-textme h2 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
