@@ -6,3 +6,9 @@
 /* Layout */
 @import url(./layout/header.css);
 @import url(./layout/main.css);
+@import url(./layout/footer.css);
+
+/* Components */
+@import url(./components/slide-dev.css);
+@import url(./components/slide-design.css);
+@import url(./components/slide-editor.css);
